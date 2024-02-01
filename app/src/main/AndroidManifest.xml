@@ -12,21 +12,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GURU2_Team4"
         tools:targetApi="31">
+
+        <!-- 온보딩 화면으로 설정 -->
         <activity
-            android:name=".MainActivity"
+            android:name=".OnboardingActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- 기존의 메인 액티비티 -->
+        <activity android:name=".MainActivity">
+            <!-- MainActivity와 관련된 설정들 -->
+        </activity>
+
+        <!-- 나머지 액티비티들 -->
         <activity android:name=".RegisterActivity">
-            <!-- 해당 액티비티와 관련된 설정들 -->
+            <!-- RegisterActivity와 관련된 설정들 -->
         </activity>
         <activity android:name=".TestActivity" />
+        <activity android:name=".PostActivity" />
+        <activity android:name=".PostListActivity" />
+        <activity android:name=".PostDetailActivity" />
+
         <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-3940256099942544~3347511713"/>
-
     </application>
-
 </manifest>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".PostDetailActivity">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fycm" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="327dp"
+        android:layout_height="540dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/backrec" />
+
+    <TextView
+        android:id="@+id/postDetailTextView"
+        android:layout_width="267dp"
+        android:layout_height="137dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/rounded_box_background"
+        android:gravity="center"
+        android:padding="16dp"
+        android:radius="15dp"
+        android:shape="rectangle"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.101" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/postDetailTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/userdefault" />
+
+    <View
+        android:id="@+id/lineView"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="28dp"
+        android:background="#91A7FF"
+        app:layout_constraintEnd_toEndOf="@+id/postDetailTextView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/postDetailTextView"
+        app:layout_constraintTop_toBottomOf="@+id/postDetailTextView" />
+
+    <TextView
+        android:id="@+id/postUserTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="17dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/postDetailTextView"
+        app:layout_constraintStart_toEndOf="@+id/imageView10" />
+
+    <!-- 댓글 입력창과 전송 버튼 -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/commentRecyclerView"
+        android:layout_width="260dp"
+        android:layout_height="206dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/commentEditText"
+        app:layout_constraintEnd_toEndOf="@+id/imageView11"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView11"
+        app:layout_constraintTop_toBottomOf="@+id/lineView"
+        app:layout_constraintVertical_bias="0.39" />
+
+    <ImageButton
+        android:id="@+id/postCommentButton"
+        android:layout_width="31dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="44dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+        app:layout_constraintEnd_toEndOf="@+id/imageView11"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/commentEditText"
+        app:srcCompat="@drawable/commentbtn" />
+
+    <EditText
+        android:id="@+id/commentEditText"
+        android:layout_width="254dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="36dp"
+        android:hint="댓글을 입력하세요"
+        android:textSize="10sp"
+        android:textColorHint="#C5C3EB"
+        android:backgroundTint="#B9B6F0"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+        app:layout_constraintStart_toStartOf="@+id/imageView11" />
+
+    <TextView
+        android:id="@+id/postTimeView"
+        android:layout_width="108dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="4dp"
+        android:text="TextView"
+        android:textSize="10sp"
+        android:textColor="#91A7FF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toEndOf="@+id/imageView10"
+        app:layout_constraintTop_toBottomOf="@+id/postUserTextView" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="15dp"
+        android:layout_height="14dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/commentRecyclerView"
+        app:layout_constraintStart_toStartOf="@+id/imageView11"
+        app:srcCompat="@drawable/commlogo" />
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <TextView
+        android:id="@+id/commentCountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="3dp"
+        android:text="TextView"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/lineView"
+        app:layout_constraintStart_toEndOf="@+id/imageView12" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

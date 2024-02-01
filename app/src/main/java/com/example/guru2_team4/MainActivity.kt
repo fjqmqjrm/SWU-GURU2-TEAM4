@@ -1,5 +1,6 @@
 package com.example.guru2_team4
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -41,10 +42,15 @@ class MainActivity : AppCompatActivity() {
                 if (checkUserpass) {
                     Toast.makeText(this@MainActivity, "로그인 되었습니다.", Toast.LENGTH_SHORT).show()
 
-                    // TestActivity로 이동하면서 사용자 아이디를 전달
+                    // PostActivity 이동하면서 사용자 아이디를 전달
                     val intent = Intent(this, TestActivity::class.java)
                     intent.putExtra("USER_ID", user)
                     startActivity(intent)
+                    val sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+                    val editor = sharedPreferences.edit()
+                    editor.putString("USER_ID", user) // 여기서 userId는 로그인한 사용자의 아이디입니다.
+                    editor.apply()
+
                 } else {
                     Toast.makeText(this@MainActivity, "아이디와 비밀번호를 확인해 주세요.", Toast.LENGTH_SHORT).show()
                 }
