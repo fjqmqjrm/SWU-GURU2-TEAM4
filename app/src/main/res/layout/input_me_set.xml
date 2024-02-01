@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/input_me_set"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/a_back"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="25dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/q_back"
+            app:srcCompat="@drawable/input_me_a_back" />
+
+        <ImageButton
+            android:id="@+id/a_send"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="5dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/a_back"
+            app:layout_constraintEnd_toEndOf="@+id/a_back"
+            app:srcCompat="@drawable/input_me_a_send" />
+
+        <ImageButton
+            android:id="@+id/q_back"
+            android:layout_width="270dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="70dp"
+            android:background="@android:color/transparent"
+            android:backgroundTint="#3C3F41"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/input_me_q_back" />
+
+        <ImageView
+            android:id="@+id/q_user"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/input_me_request" />
+
+        <TextView
+            android:id="@+id/q_nick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:text="questioner_name"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/q_user"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/q_title"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="18dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="title"
+            app:layout_constraintStart_toEndOf="@+id/q_user"
+            app:layout_constraintTop_toBottomOf="@+id/q_nick" />
+
+        <ScrollView
+            android:id="@+id/q_content_scrollview"
+            android:layout_width="240dp"
+            android:layout_height="83dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toEndOf="@+id/q_user"
+            app:layout_constraintTop_toBottomOf="@+id/q_title">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/q_content"
+            android:layout_width="240dp"
+            android:layout_height="80dp"
+            android:text="content"
+            app:layout_constraintStart_toStartOf="@+id/q_content_scrollview"
+            app:layout_constraintTop_toTopOf="@+id/q_content_scrollview" />
+
+        <ScrollView
+            android:id="@+id/a_content_scrollview"
+            android:layout_width="170dp"
+            android:layout_height="76dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/a_back"
+            app:layout_constraintStart_toStartOf="@+id/a_back"
+            app:layout_constraintTop_toTopOf="@+id/a_back">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+
+        <EditText
+            android:id="@+id/a_content"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:ellipsize="end"
+            android:hint="Answer"
+            android:maxLines="4"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/a_content_scrollview"
+            app:layout_constraintTop_toTopOf="@+id/a_content_scrollview" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

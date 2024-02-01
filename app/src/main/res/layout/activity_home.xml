@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/home_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/home_back" />
+
+    <Button
+        android:background="@android:color/transparent"
+        android:id="@+id/home_tap_part4"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="200dp"
+        android:backgroundTint="#000000"
+        app:layout_constraintStart_toEndOf="@+id/home_tap_part3"
+        app:layout_constraintTop_toTopOf="@+id/home_back" />
+
+    <ScrollView
+        android:id="@+id/home_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginBottom="55dp"
+        app:layout_constraintBottom_toBottomOf="@+id/home_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_tap_all"
+        app:layout_constraintVertical_bias="0.978">
+
+        <LinearLayout
+            android:id="@+id/home_scrollview_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/home_tap_back"
+        android:layout_width="312dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp"
+        android:backgroundTint="#000000"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/home_tap_all"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/home_menu_all"
+        android:layout_width="252dp"
+        android:layout_height="33dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/menu_all" />
+
+    <Button
+        android:id="@+id/button_qanda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="요청함페이지"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="285dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <Button
+        android:background="@android:color/transparent"
+        android:id="@+id/home_tap_all"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="200dp"
+        android:backgroundTint="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/home_back" />
+
+    <Button
+        android:background="@android:color/transparent"
+        android:id="@+id/home_tap_part1"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="200dp"
+        android:backgroundTint="#000000"
+        app:layout_constraintStart_toEndOf="@+id/home_tap_all"
+        app:layout_constraintTop_toTopOf="@+id/home_back" />
+
+    <Button
+        android:id="@+id/home_tap_part3"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="200dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="#000000"
+        app:layout_constraintStart_toEndOf="@+id/home_tap_part2"
+        app:layout_constraintTop_toTopOf="@+id/home_back" />
+
+    <Button
+        android:background="@android:color/transparent"
+        android:id="@+id/home_tap_part2"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="200dp"
+        android:backgroundTint="#000000"
+        app:layout_constraintStart_toEndOf="@+id/home_tap_part1"
+        app:layout_constraintTop_toTopOf="@+id/home_back" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
