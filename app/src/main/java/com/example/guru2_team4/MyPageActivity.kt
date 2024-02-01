@@ -73,7 +73,12 @@ class MyPageActivity : AppCompatActivity() {
 
         // 뒤로가기
         backButton.setOnClickListener {
-            finish()
+            // TargetActivity 로 이동하는 Intent 생성
+            val intent = Intent(this, HomeActivity::class.java)
+
+            // Intent를 사용하여 새로운 액티비티 시작
+            startActivity(intent)
+
         }
 
         // 메달 이미지 업데이트
