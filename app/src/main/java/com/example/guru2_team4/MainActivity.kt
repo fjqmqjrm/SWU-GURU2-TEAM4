@@ -21,6 +21,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         DB = DBHelper(this)
+        // 더미 데이터 추가 - 로그인 확인용 (제출 시)
+        val userId = "guru2024"
+        val password = "guru2424"
+        val nick = "KEY"
+        val phone = "010-1234-5678"
+
+        val isInserted = DB!!.insertData(userId, password, nick, phone)
+
 
         btnLogin = findViewById(R.id.btnLogin)
         editTextId = findViewById(R.id.editTextId)
