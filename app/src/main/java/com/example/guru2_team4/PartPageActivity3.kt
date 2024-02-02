@@ -92,7 +92,7 @@ class PartPageActivity3 : AppCompatActivity(), OnUrlEnteredListener {
         }
     }
 
-    //어드바이저님이 추가하신거//
+
     private fun getPartUrl(part: String): String? {
         val DBHelper = DBHelper(this)
         val ownerId: String? = intent.getStringExtra("owner_id")
