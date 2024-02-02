@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">GURU2_Team4</string>
+
+    <!-- 추가-->
+    <string name="button_back">Back</string>
+    <string name="my_page_text">My Page</string>
+    <string name="part1_checkbox_text">Part1</string>
+    <string name="username_text">USER</string>
+    <string name="profile_image_description">프로필 이미지</string>
+    <string name="part4_menu_button">Part4</string>
+    <string name="part4_checkbox_text">Part4</string>
+    <string name="part1_menu_button_description">Part 1 Menu Button</string>
+    <string name="part2_menu_button_description">Part 2 Menu Button</string>
 </resources>

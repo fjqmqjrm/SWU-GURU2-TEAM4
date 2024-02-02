@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:radius="20dp"
+    android:padding="20dp">
+
+
+
+
+    <ImageView
+        android:id="@+id/closeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_close"
+        android:layout_marginEnd="2dp"
+        android:layout_alignParentEnd="true"
+        android:clickable="true"
+        android:contentDescription="bb"
+        android:focusable="true"/>
+
+    <!-- 제목 텍스트 -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Post URL"
+        android:textSize="15sp"
+        android:textColor="#555555"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="0dp" />
+
+    <RelativeLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="0dp"
+        android:padding="10dp">
+
+        <!-- 주제 텍스트 -->
+        <TextView
+            android:id="@+id/topic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:text="Default Topic"
+            android:textColor="#555555"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <!-- 구분선 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/topic"
+            android:layout_marginTop="10dp"
+            android:background="#555555" />
+
+        <!-- 회색 사각형 -->
+        <RelativeLayout
+
+            android:layout_width="355dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/topic"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/enter_background">
+
+            <!-- 주제 텍스트 -->
+            <TextView
+                android:id="@+id/topicTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:text="주제(ex: 배열)"
+                android:textColor="#555555"
+                android:textSize="10sp" />
+
+            <!-- 구분선 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/topicTextView"
+                android:layout_marginTop="10dp"
+                android:background="#C3C3C3" />
+
+            <!-- URL 입력 칸 -->
+            <EditText
+                android:id="@+id/urlEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/topicTextView"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@android:color/transparent"
+                android:hint="Enter URL"
+                android:inputType="textUri"
+                android:padding="10dp"
+
+                android:textSize="10sp" />
+
+
+        </RelativeLayout>
+        <!-- Send 버튼 -->
+        <RelativeLayout
+            android:id="@+id/sendButton"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/urlEditText"
+
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="230dp"
+            android:layout_marginEnd="70dp"
+            android:background="@drawable/custom_button_background"
+            android:clickable="true"
+            android:focusable="true"
+            tools:ignore="NotSibling">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="send"
+                android:textColor="#6A5ACD"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

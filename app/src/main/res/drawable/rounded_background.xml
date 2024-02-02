@@ -1,0 +1,4 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#EBEFFF" />
+    <corners android:radius="10dp" /> <!-- 코너 둥글게 설정 -->
+</shape>

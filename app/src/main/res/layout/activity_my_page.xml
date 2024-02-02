@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyPageActivity">
+
+
+
+    <ImageButton
+        android:id="@+id/profile_isfollowing"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/usernameText"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="7dp"
+        android:backgroundTint="#FEFEFE"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/userprofile_request"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/userprofile_back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.516"
+        app:srcCompat="@drawable/userprofile_follow"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/profile_request"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/usernameText"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="80dp"
+        android:backgroundTint="#FEFEFE"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/userprofile_back"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/userprofile_isfollowing"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.516"
+        app:srcCompat="@drawable/userprofile_request"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/profile_request_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/profile_request"
+        android:layout_alignTop="@+id/profile_request"
+        android:layout_alignEnd="@+id/profile_request"
+        android:layout_alignBottom="@+id/profile_request"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="20dp"
+        android:text="Request"
+        android:textAlignment="center"
+        android:textColor="#6C63FE"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/userprofile_request"
+        app:layout_constraintEnd_toEndOf="@+id/userprofile_request"
+        app:layout_constraintStart_toEndOf="@+id/userprofile_isfollowing"
+        app:layout_constraintTop_toTopOf="@+id/userprofile_request" />
+
+    <TextView
+        android:id="@+id/profile_isfollowing_text"
+        android:layout_width="64dp"
+        android:layout_height="20dp"
+        android:layout_alignStart="@+id/profile_isfollowing"
+        android:layout_alignTop="@+id/profile_isfollowing"
+        android:layout_alignEnd="@+id/profile_isfollowing"
+        android:layout_alignBottom="@+id/profile_isfollowing"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="20dp"
+        android:text="Follow"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/userprofile_isfollowing"
+        app:layout_constraintEnd_toEndOf="@+id/userprofile_isfollowing"
+        app:layout_constraintStart_toStartOf="@+id/userprofile_isfollowing"
+        app:layout_constraintTop_toTopOf="@+id/userprofile_isfollowing" />
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/img_1"
+        android:layout_marginStart="20dp"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerInside"
+        />
+
+    <TextView
+        android:id="@+id/pagename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_page_text"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_toEndOf="@+id/backButton"
+        android:layout_alignBaseline="@+id/backButton"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+
+        />
+
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/profile_image_placeholder"
+
+        android:contentDescription="@string/profile_image_description"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/pagename"
+        android:layout_marginTop="25dp"
+        />
+
+    <TextView
+        android:id="@+id/usernameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/username_text"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:layout_below="@+id/profileImage"
+        android:layout_marginTop="10dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/tabsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/usernameText"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="1dp"
+        android:orientation="vertical">
+
+        <!-- Part1 탭 -->
+        <RelativeLayout
+            android:id="@+id/part1TabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/tab_background">
+
+            <CheckBox
+                android:id="@+id/part1Checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:background="@android:color/transparent"
+                android:text="@string/part1_checkbox_text"
+
+                />
+
+            <!-- 메달 아이콘 -->
+            <ImageView
+                android:id="@+id/medalIcon1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/part1Checkbox"
+                android:src="@drawable/medal1" />
+
+            <ImageButton
+                android:id="@+id/part1MenuButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/part1_menu_button_description"
+                android:src="@drawable/menu_icon" />
+
+        </RelativeLayout>
+
+        <!-- Part2 탭 -->
+        <RelativeLayout
+            android:id="@+id/part2TabLayout"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/tab_background">
+
+            <CheckBox
+                android:id="@+id/part2Checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:background="@android:color/transparent"
+                android:text="Part2" />
+            <!-- 메달 아이콘 -->
+            <ImageView
+                android:id="@+id/medalIcon2"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="-5dp"
+                android:layout_marginTop="1dp"
+                android:layout_toEndOf="@id/part2Checkbox"
+                android:src="@drawable/medal2" />
+
+            <ImageButton
+                android:id="@+id/part2MenuButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/part2_menu_button_description"
+                android:src="@drawable/menu_icon" />
+
+        </RelativeLayout>
+
+        <!-- Part3 탭 -->
+        <RelativeLayout
+            android:id="@+id/part3TabLayout"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/tab_background">
+
+            <CheckBox
+                android:id="@+id/part3Checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:background="@android:color/transparent"
+                android:text="Part3" />
+            <!-- 메달 아이콘 -->
+            <ImageView
+                android:id="@+id/medalIcon3"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="-3dp"
+                android:layout_toEndOf="@id/part3Checkbox"
+                android:src="@drawable/medal3" />
+
+            <ImageButton
+                android:id="@+id/part3MenuButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="Part 3 Menu Button"
+                android:src="@drawable/menu_icon" />
+
+        </RelativeLayout>
+
+        <!-- Part4 탭 -->
+        <RelativeLayout
+            android:id="@+id/part4TabLayout"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/tab_background">
+
+            <CheckBox
+                android:id="@+id/part4Checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:background="@android:color/transparent"
+                android:text="Part4" />
+            <!-- 메달 아이콘 -->
+            <ImageView
+                android:id="@+id/medalIcon4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/part4Checkbox"
+                android:src="@drawable/medal4" />
+
+            <ImageButton
+                android:id="@+id/part4MenuButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/part4_menu_button"
+                android:src="@drawable/menu_icon" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/medal"
+        android:layout_width="40dp"
+        android:layout_height="38dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="290dp"
+        android:layout_marginEnd="135dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/medal1" />
+
+</RelativeLayout>
