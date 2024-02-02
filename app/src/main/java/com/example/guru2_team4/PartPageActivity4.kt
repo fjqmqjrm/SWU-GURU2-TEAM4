@@ -22,6 +22,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.widget.RelativeLayout
 import android.widget.TextView
 import android.widget.Toast
+import org.json.JSONObject.NULL
+import java.sql.Types.NULL
 
 class PartPageActivity4 : AppCompatActivity(), OnUrlEnteredListener {
 
@@ -47,7 +49,24 @@ class PartPageActivity4 : AppCompatActivity(), OnUrlEnteredListener {
         //어드바이저님이 쓰신거 근데 이거 하면 url가 첫번째두번째탭에도 적용됨..
         tabUrlTextView.text =getPartUrl("part 이름")
         //어드바이저님이 쓰신거끝
+
+
 */
+
+        // DB에서 가져온 URL을 EditText에 적용
+        val dbHelper = DBHelper(this)
+
+        // String 리스트 선언
+        val topicList = listOf("동적 프로그래밍", "그리디 알고리즘")
+
+// DB 데이터 적용
+        for (topic in topicList) {
+            dbHelper.getPartUrl(topic)?.let { partPageUrl ->
+                onUrlEntered(partPageUrl, topic) // 링크로 변환
+            }
+        }
+
+
         findViewById<RelativeLayout>(R.id.addButton).setOnClickListener {
             val addUrlDialog = AddUrlDialog(this, this, "동적 프로그래밍")//Part4
             addUrlDialog.show()

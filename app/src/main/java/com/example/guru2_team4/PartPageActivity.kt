@@ -16,11 +16,14 @@ import android.graphics.Color
 import android.graphics.Paint
 import android.net.Uri
 import android.os.Bundle
+import android.widget.EditText
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.RelativeLayout
 import android.widget.TextView
 import android.widget.Toast
+import android.content.Context
+import android.util.Log
 
 class PartPageActivity : AppCompatActivity(), OnUrlEnteredListener {
 
@@ -58,6 +61,23 @@ class PartPageActivity : AppCompatActivity(), OnUrlEnteredListener {
         tabUrlSortingTextView = findViewById(R.id.tabSortingUrl) // 추가@@@@@@@@
         tabUrlBruteforceTextView = findViewById(R.id.tabBruteforceUrl) // 추가@@@@@@@@
         tabUrlNumberTheoryTextView = findViewById(R.id.tabNumberTheoryUrl) // 추가@@@@@@@@
+
+
+        // DB에서 가져온 URL을 EditText에 적용
+        val dbHelper = DBHelper(this)
+
+        // String 리스트 선언
+        val topicList = listOf("배열", "문자열", "반복문과 재귀함수", "계산복잡도", "정렬", "완전탐색", "정수론")
+
+        // DB 데이터 적용
+        for (topic in topicList) {
+            dbHelper.getPartUrl(topic)?.let { partPageUrl ->
+                onUrlEntered(partPageUrl, topic) // 링크로 변환
+            }
+        }
+
+
+
 
         findViewById<RelativeLayout>(R.id.addButton).setOnClickListener {
             val addUrlDialog = AddUrlDialog(this, this, "배열")//"Part1"
@@ -104,6 +124,9 @@ class PartPageActivity : AppCompatActivity(), OnUrlEnteredListener {
         return DBHelper.getPartUrl(part)
     }
     //어드 추가끝
+
+
+
     override fun onUrlEntered(enteredUrl: String, topic: String) {
         when (topic) {
             "배열" -> {

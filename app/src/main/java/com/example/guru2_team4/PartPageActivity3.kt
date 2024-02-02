@@ -42,6 +42,19 @@ class PartPageActivity3 : AppCompatActivity(), OnUrlEnteredListener {
         tabUrlLoopTextView = findViewById(R.id.tabLoopUrl) // 추가@@@@@@@@
         tabUrlComplexityTextView = findViewById(R.id.tabComplexityUrl) // 추가@@@@@@@@
 
+        // DB에서 가져온 URL을 EditText에 적용
+        val dbHelper = DBHelper(this)
+
+        // String 리스트 선언
+        val topicList = listOf("그래프(vertex, edge, node, arc)", "BFS", "DFS", "위상정렬")
+
+        // DB 데이터 적용
+        for (topic in topicList) {
+            dbHelper.getPartUrl(topic)?.let { partPageUrl ->
+                onUrlEntered(partPageUrl, topic) // 링크로 변환
+            }
+        }
+
         findViewById<RelativeLayout>(R.id.addButton).setOnClickListener {
             val addUrlDialog = AddUrlDialog(this, this, "그래프(vertex, edge, node, arc)") //Part3
             addUrlDialog.show()

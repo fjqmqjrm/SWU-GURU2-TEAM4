@@ -104,6 +104,8 @@ class AddUrlDialog(
             dismiss() // 다이얼로그 닫기
         }
 
+
+
         // x 버튼 동작
         closeButton.setOnClickListener {
             dismiss()

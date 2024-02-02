@@ -77,11 +77,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:text="URL"
-
                 android:padding="10dp"
-                android:textSize="12sp"
-                android:textColor="#555555"/>
+
+                android:text="URL"
+                android:textColor="#555555"
+                android:textSize="12sp" />
 
             <!-- URL 아이콘 -->
             <ImageView

@@ -21,7 +21,7 @@ class DBHelper(context: Context) :
     // followers 테이블 생성 (사용자 간의 팔로우 관계를 저장)
     // questions, answers 테이블 생성 (Q&A 목록들을 저장)
     override fun onCreate(db: SQLiteDatabase?) {
-        db!!.execSQL("create Table users(id TEXT primary key, password TEXT, nick TEXT, phone TEXT, part INTEGER DEFAULT 1)")
+        db!!.execSQL("CREATE TABLE users(id TEXT PRIMARY KEY, password TEXT, nick TEXT, phone TEXT, part INTEGER DEFAULT 1)")
         db.execSQL("create Table posts(id INTEGER primary key autoincrement, userId TEXT, title TEXT, content TEXT, timestamp INTEGER)")
         db.execSQL("create Table comments(commentId INTEGER primary key autoincrement, postId TEXT, userId TEXT, content TEXT, timestamp INTEGER)")
         MyDB = db
@@ -357,13 +357,14 @@ class DBHelper(context: Context) :
     }
 
     // getUserPart : 유저의 Part을 조회하는 함수
+    @SuppressLint("Range")
     fun getUserPart(user_id: String?): Int {
         val db = this.readableDatabase
         val cursor: Cursor = db.rawQuery("SELECT part FROM users WHERE id = ?", arrayOf(user_id))
         var part = 0
 
         if (cursor.moveToFirst()) {
-            part = cursor.getInt(0)
+            part = cursor.getInt(cursor.getColumnIndex("part"))
         }
 
         cursor.close()

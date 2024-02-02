@@ -48,6 +48,21 @@ class PartPageActivity2 : AppCompatActivity(), OnUrlEnteredListener {
                 tabUrlTextView.text =getPartUrl("part 이름")
                 //어드바이저님이 쓰신거끝
         */
+
+
+        // DB에서 가져온 URL을 EditText에 적용
+        val dbHelper = DBHelper(this)
+
+        // String 리스트 선언
+        val topicList = listOf("분할정복", "이분탐색", "스택", "큐", "우선순위 큐")
+
+        // DB 데이터 적용
+        for (topic in topicList) {
+            dbHelper.getPartUrl(topic)?.let { partPageUrl ->
+                onUrlEntered(partPageUrl, topic) // 링크로 변환
+            }
+        }
+
         findViewById<RelativeLayout>(R.id.addButton).setOnClickListener {
             val addUrlDialog = AddUrlDialog(this, this, "분할정복")//Part2
             addUrlDialog.show()
