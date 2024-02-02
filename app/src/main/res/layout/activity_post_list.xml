@@ -51,15 +51,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/fycm" />
 
-    <View
-        android:id="@+id/navigationBox"
-        android:layout_width="422dp"
-        android:layout_height="50dp"
-        android:background="#6C63FF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/allPostButton"
@@ -110,51 +101,52 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/imageView9"
+        android:layout_width="645dp"
+        android:layout_height="112dp"
+        android:layout_marginTop="544dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:srcCompat="@drawable/bottom_navi_bar"
+        tools:layout_editor_absoluteX="-152dp" />
+
+    <ImageView
+        android:id="@+id/navi_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/navigationBox"
-        app:layout_constraintEnd_toStartOf="@+id/imageView7"
-        app:layout_constraintStart_toStartOf="@+id/navigationBox"
-        app:layout_constraintTop_toTopOf="@+id/navigationBox"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/home" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/navi_community"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/navigationBox"
-        app:layout_constraintEnd_toStartOf="@+id/imageView8"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toTopOf="@+id/navigationBox"
+        android:layout_marginStart="55dp"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/navi_home"
         app:srcCompat="@drawable/commu" />
 
     <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/navigationBox"
-        app:layout_constraintEnd_toStartOf="@+id/imageView9"
-        app:layout_constraintStart_toEndOf="@+id/imageView7"
-        app:layout_constraintTop_toTopOf="@+id/navigationBox"
-        app:srcCompat="@drawable/messa" />
+        android:id="@+id/navi_qanda"
+        android:layout_width="48dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginBottom="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/navi_community"
+        app:srcCompat="@drawable/menu_qanda" />
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/navi_mypage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/navigationBox"
-        app:layout_constraintEnd_toEndOf="@+id/navigationBox"
-        app:layout_constraintStart_toEndOf="@+id/imageView8"
-        app:layout_constraintTop_toTopOf="@+id/navigationBox"
+        android:layout_marginStart="55dp"
+        android:layout_marginBottom="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/navi_qanda"
         app:srcCompat="@drawable/mypage" />
 
 

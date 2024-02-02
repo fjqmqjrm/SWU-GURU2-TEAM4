@@ -13,7 +13,6 @@
         android:theme="@style/Theme.GURU2_Team4"
         tools:targetApi="31">
 
-        <!-- 온보딩 화면으로 설정 -->
         <activity
             android:name=".OnboardingActivity"
             android:exported="true">
@@ -22,6 +21,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
 
         <!-- 기존의 메인 액티비티 -->
         <activity android:name=".MainActivity">
@@ -38,5 +38,21 @@
         <activity android:name=".PostDetailActivity" />
 
         <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-3940256099942544~3347511713"/>
+
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".QandAActivity" />
+        <activity android:name=".QViewDetailsActivity" />
+        <activity android:name=".AViewDetailsActivity" />
+        <activity android:name=".RequestActivity" />
+        <activity android:name=".MyPageActivity" />
+        <activity android:name=".PartPageActivity" />
+        <activity android:name=".PartPageActivity2" />
+        <activity android:name=".PartPageActivity3" />
+        <activity android:name=".PartPageActivity4" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+
     </application>
 </manifest>

@@ -34,8 +34,38 @@ class PostListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_post_list)
 
+
+
         // UI 컴포넌트 초기화
         postListView = findViewById(R.id.postListView)
+
+        // navi
+
+        // HomeActivity로 이동
+        findViewById<ImageView>(R.id.navi_home).setOnClickListener {
+            startActivity(Intent(this, HomeActivity::class.java))
+        }
+
+        // PostListActivity로 이동
+        findViewById<ImageView>(R.id.navi_community).setOnClickListener {
+            startActivity(Intent(this, PostListActivity::class.java))
+        }
+
+        // QandAActivity로 이동
+        findViewById<ImageView>(R.id.navi_qanda).setOnClickListener {
+            startActivity(Intent(this, QandAActivity::class.java))
+        }
+
+        // MyPageActivity로 이동
+        findViewById<ImageView>(R.id.navi_mypage).setOnClickListener {
+            val intent = Intent(this, MyPageActivity::class.java)
+            val dbHelper = DBHelper(this)
+            val sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+            val user_id = sharedPreferences.getString("USER_ID", "") ?: ""
+            intent.putExtra("nick", dbHelper.getUserNickname(user_id))
+            startActivity(intent)
+
+        }
 
         val sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
         val loginUser = sharedPreferences.getString("USER_ID", "") ?: ""

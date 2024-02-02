@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PartPageActivity2">
+
+    <!-- 상단바 -->
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="Go back"
+            android:src="@drawable/img_1"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Part 2"
+            android:layout_toEndOf="@id/backButton"
+            android:layout_marginStart="10dp"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <!-- 중앙 탭 영역 -->
+    <RelativeLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topBar"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/rounded_background"
+        android:layout_marginEnd="20dp"
+
+        >
+
+        <!-- 각 탭 버튼 -->
+        <RelativeLayout
+            android:id="@+id/addButton"
+            style="@style/TabButton"
+            android:layout_marginTop="0dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="분할정복"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_plus" />
+
+            <!-- URL 표시 -->
+            <TextView
+                android:id="@+id/tabUrl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="URL"
+
+                android:padding="10dp"
+                android:textSize="12sp"
+                android:textColor="#555555"/>
+
+            <!-- URL 아이콘 -->
+            <ImageView
+                android:id="@+id/urlIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="38dp"
+                android:rotation="145"
+                android:src="@drawable/ic_url" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tabString"
+            style="@style/TabButton"
+            android:layout_below="@id/addButton"
+            android:layout_marginTop="60dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이분탐색"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_plus" />
+
+            <!-- URL 표시 -->
+            <TextView
+                android:id="@+id/tabStringUrl"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="URL"
+                android:padding="10dp"
+                android:textSize="12sp"
+                android:textColor="#555555"/>
+
+            <!-- URL 아이콘 -->
+            <ImageView
+                android:id="@+id/urlIcon2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="38dp"
+                android:rotation="145"
+                android:src="@drawable/ic_url" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tabLoop"
+            style="@style/TabButton"
+            android:layout_below="@id/tabString"
+            android:layout_marginTop="60dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="스택"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_plus" />
+
+            <!-- URL 표시 -->
+            <TextView
+                android:id="@+id/tabLoopUrl"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="URL"
+                android:padding="10dp"
+                android:textSize="12sp"
+                android:textColor="#555555"/>
+            <!-- URL 아이콘 -->
+            <ImageView
+                android:id="@+id/urlIcon3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="38dp"
+                android:rotation="145"
+                android:src="@drawable/ic_url" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tabComplexity"
+            style="@style/TabButton"
+            android:layout_below="@id/tabLoop"
+            android:layout_marginTop="60dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="큐"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_plus" />
+
+            <!-- URL 표시 -->
+            <TextView
+                android:id="@+id/tabComplexityUrl"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="URL"
+                android:padding="10dp"
+                android:textSize="12sp"
+                android:textColor="#555555"/>
+
+            <!-- URL 아이콘 -->
+            <ImageView
+                android:id="@+id/urlIcon4"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="38dp"
+                android:rotation="145"
+                android:src="@drawable/ic_url" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tabSorting"
+            style="@style/TabButton"
+            android:layout_below="@id/tabComplexity"
+            android:layout_marginTop="60dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="우선순위 큐"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_plus" />
+
+            <!-- URL 표시 -->
+            <TextView
+                android:id="@+id/tabSortingUrl"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="URL"
+                android:padding="10dp"
+                android:textSize="12sp"
+                android:textColor="#555555"/>
+
+            <!-- URL 아이콘 -->
+            <ImageView
+                android:id="@+id/urlIcon5"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="38dp"
+                android:rotation="145"
+                android:src="@drawable/ic_url" />
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
