@@ -18,3 +18,4 @@
 <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=Figma&logoColor=white">
 
 ### Developers
+![Slide 16_9 - 24](https://github.com/fjqmqjrm/SWU-GURU2-TEAM4/assets/126189239/5dffd8b0-6d2f-4f6c-be1e-4b3d25e2bb71)
