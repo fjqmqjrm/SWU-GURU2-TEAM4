@@ -11,4 +11,4 @@
 ![Slide 16_9 - 23](https://github.com/fjqmqjrm/SWU-GURU2-team4/assets/126189239/d8a0aa8f-e49c-4ee9-a13a-b2cd0fd97894)
 
 
-<img src="https://img.shields.io/badge/#7F52FF?style=for-the-badge&logo=<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Kotlin</title><path d="M24 24H0V0h24L12 12Z"/></svg>&logoColor=white">
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white">
