@@ -14,8 +14,7 @@
 <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=Kotlin&logoColor=white">
 
 ### Collaborative Tools
-<img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=Notion&logoColor=white">
-<img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=Figma&logoColor=white">
+<img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=Notion&logoColor=white"> <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=Figma&logoColor=white">
 
 ### Developers
-![ss](https://github.com/fjqmqjrm/SWU-GURU2-TEAM4/assets/126189239/294a1234-41fb-48ad-8ab1-40856553d5aa)
+![dd](https://github.com/fjqmqjrm/SWU-GURU2-TEAM4/assets/126189239/9add1e84-f5c6-43fa-b34d-422e4da416c0)
